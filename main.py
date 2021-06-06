@@ -16,6 +16,10 @@ import joblib
 # untuk membuat route
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 if __name__ == '__main__':
     ## Me-Load data dari Database
     sqlengine = create_engine('mysql://root:1234@localhost/hotel_pwdk', pool_recycle=3306)

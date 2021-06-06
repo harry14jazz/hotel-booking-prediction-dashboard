@@ -13,11 +13,11 @@ $(document).ready(function() {
   $(function() {
     $('body').vegas({
         slides: [
-          { src: 'images/city.jpg' },
-          { src: 'images/resort.jpg' },
-          { src: 'images/hotel.jpg' },
-          { src: 'images/kamar.jpg' },
-          { src: 'images/resort2.jpg' },
+          { src: 'static/images/city.jpg' },
+          { src: 'static/images/resort.jpg' },
+          { src: 'static/images/hotel.jpg' },
+          { src: 'static/images/kamar.jpg' },
+          { src: 'static/images/resort2.jpg' },
         ],
         timer: false,
         transition: [ 'zoomOut', ]
