@@ -211,8 +211,7 @@ def pred_result():
         )
 
 if __name__ == '__main__':
-    ## Me-Load data dari Database
-    
+        
     # sqlengine = create_engine('mysql://root:1234@localhost/hotel_pwdk', pool_recycle=3306)
     # dbConnection = sqlengine.connect()
     # engine = sqlengine.raw_connection()
