@@ -230,64 +230,64 @@ http://www.templatemo.com/tm-490-comila
           <input name="submit" type="submit" class="form-control" id="submit" value="Subscribe Now">
         </form> -->
         
-        <form action="{{url_for('static', filename='templates/sucess_predict.html')}}" method="post">
+        <form action="http://localhost:5000/pred_result" method="POST">
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="hotel_type">hotel type</label>
-              <select id="inputState" class="form-control">
+              <select id="inputState" name="hotel_type" class="form-control">
                 <option value="city_hotel" selected class="inputan">City Hotel</option>
                 <option value="resort_hotel">Resort Hotel</option>
               </select>
             </div>
             <div class="form-group col-md-6">
               <label for="special_request">Total of Special Request</label>
-              <input type="number" class="form-control" id="special_request" placeholder="Total of Special Request">
+              <input type="number" class="form-control" name="special_request" placeholder="Total of Special Request">
             </div>
           </div> 
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="arv_date_year">Arrival Date Year</label>
-              <input type="number" class="form-control" id="arv_date_year" placeholder="Arrival Date Year">
+              <input type="number" class="form-control" name="arv_date_year" placeholder="Arrival Date Year">
             </div>
             <div class="form-group col-md-6">
               <label for="arv_date_month">Arrival Date Month</label>
-              <input type="text" class="form-control" id="arv_date_month" placeholder="Arrival Date Month">
+              <input type="text" class="form-control" name="arv_date_month" placeholder="Arrival Date Month">
             </div>
           </div><div class="form-row">
             <div class="form-group col-md-6">
               <label for="arv_date_week_number">Arrival Date Week</label>
-              <input type="number" class="form-control" id="arv_date_week_number" min='1' max='52' placeholder="Arrival Date Week">
+              <input type="number" class="form-control" name="arv_date_week_number" min='1' max='52' placeholder="Arrival Date Week">
             </div>
             <div class="form-group col-md-6">
               <label for="arv_date_day">Arrival Date Day</label>
-              <input type="number" class="form-control" id="arv_date_day" min='1' max='31' placeholder="Arrival Date Day">
+              <input type="number" class="form-control" name="arv_date_day" min='1' max='31' placeholder="Arrival Date Day">
             </div>
           </div><div class="form-row">
             <div class="form-group col-md-6">
               <label for="stay_in_weekend_night">Stays In Weekend Night</label>
-              <input type="number" class="form-control" id="stay_in_weekend_night" placeholder="Stays In Weekend Night">
+              <input type="number" class="form-control" name="stay_in_weekend_night" placeholder="Stays In Weekend Night">
             </div>
             <div class="form-group col-md-6">
               <label for="stays_in_week_nights">Stays In Week Night</label>
-              <input type="number" class="form-control" id="stays_in_week_nights" placeholder="Stays In Week Night">
+              <input type="number" class="form-control" name="stays_in_week_nights" placeholder="Stays In Week Night">
             </div>
           </div><div class="form-row">
             <div class="form-group col-md-6">
               <label for="adults">Adults</label>
-              <input type="number" class="form-control" id="adults" placeholder="Adults">
+              <input type="number" class="form-control" name="adults" placeholder="Adults">
             </div>
             <div class="form-group col-md-6">
               <label for="children">Children</label>
-              <input type="number" class="form-control" id="children" placeholder="Children">
+              <input type="number" class="form-control" name="children" placeholder="Children">
             </div>
           </div><div class="form-row">
             <div class="form-group col-md-6">
               <label for="Babies">Babies</label>
-              <input type="number" class="form-control" id="Babies" placeholder="Babies">
+              <input type="number" class="form-control" name="babies" placeholder="Babies">
             </div>
             <div class="form-group col-md-6">
               <label for="Meal">Meal</label>
-              <select id="inputState" class="form-control">
+              <select id="inputState" name="meal" class="form-control">
                 <option value="BB_meal" selected class="inputan">BB</option>
                 <option value="FB_Meal">FB</option>
                 <option value="HB_Meal">HB</option>
@@ -297,15 +297,15 @@ http://www.templatemo.com/tm-490-comila
           </div><div class="form-row">
             <div class="form-group col-md-6">
               <label for="inputCountry">Country</label>
-              <input type="text" class="form-control" id="inputCountry" placeholder="Country">
+              <input type="text" class="form-control" name="country" placeholder="Country">
             </div>
             <div class="form-group col-md-6">
               <label for="inputMS">Market Segment</label>
-              <select id="inputState" class="form-control">
+              <select id="inputState" name="market_segment" class="form-control">
                 <option value="ms_Direct" selected class="inputan">Direct</option>
                 <option value="ms_Corporate">Corporate</option>
-                <option value="ms_Online TA">Online TA</option>
-                <option value="ms_Offline TA/TO">Offline TA/TO</option>
+                <option value="ms_Online_TA">Online TA</option>
+                <option value="ms_Offline_TA_TO">Offline TA/TO</option>
                 <option value="ms_Groups">Groups</option>
                 <option value="ms_Complementary">Complementary</option>
                 <option value="ms_Aviation">Aviation</option>
@@ -314,34 +314,33 @@ http://www.templatemo.com/tm-490-comila
           </div><div class="form-row">
             <div class="form-group col-md-6">
               <label for="inputDC">Distribution Channel</label>
-              <select id="inputState" class="form-control">
+              <select id="inputState" name="distribution_channel" class="form-control">
                 <option value="dc_Direct" selected class="inputan">Direct</option>
                 <option value="dc_Corporate">Corporate</option>
                 <option value="dc_TA_TO">TA/TO</option>
-                <option value="dc_Offline TA/TO">Offline TA/TO</option>
                 <option value="dc_GDS">GDS</option>
               </select>
             </div>
             <div class="form-group col-md-6">
               <label for="repeated_guest">Repeated Guest</label>
-              <select id="inputState" class="form-control">
-                <option value="1" selected class="inputan">YES</option>
-                <option value="0">NO</option>
+              <select id="inputState" name="is_repeated" class="form-control">
+                <option value="yes" selected class="inputan">YES</option>
+                <option value="no">NO</option>
               </select>
             </div>
           </div><div class="form-row">
             <div class="form-group col-md-6">
               <label for="pre_cancellations">Previous Cancellations</label>
-              <input type="number" class="form-control" id="pre_cancellations" placeholder="Previous Cancellations">
+              <input type="number" class="form-control" name="pre_cancellations" placeholder="Previous Cancellations">
             </div>
             <div class="form-group col-md-6">
               <label for="pre_not_cancel">Previous Bookings Not Canceled</label>
-              <input type="number" class="form-control" id="pre_not_cancel" placeholder="Previous Bookings Not Canceled">
+              <input type="number" class="form-control" name="pre_not_cancel" placeholder="Previous Bookings Not Canceled">
             </div>
           </div><div class="form-row">
             <div class="form-group col-md-6">
               <label for="reserved_room">Reserved Room Type</label>
-              <select id="inputState" class="form-control">
+              <select id="inputState" name="reserved_room_type" class="form-control">
                 <option value="A" selected class="inputan">A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
@@ -350,14 +349,12 @@ http://www.templatemo.com/tm-490-comila
                 <option value="F">F</option>
                 <option value="G">G</option>
                 <option value="H">H</option>
-                <option value="I">I</option>
-                <option value="J">J</option>
-                <option value="K">K</option>
+                <option value="L">L</option>
               </select>
             </div>
             <div class="form-group col-md-6">
               <label for="assigned_room">Assigned Room Type</label>
-              <select id="inputState" class="form-control">
+              <select id="inputState" name="assigned_room_type" class="form-control">
                 <option value="A" selected class="inputan">A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
@@ -374,11 +371,11 @@ http://www.templatemo.com/tm-490-comila
           </div><div class="form-row">
             <div class="form-group col-md-6">
               <label for="booking_change">Booking Changes</label>
-              <input type="number" class="form-control" id="booking_change" placeholder="Booking Changes">
+              <input type="number" class="form-control" name="booking_change" placeholder="Booking Changes">
             </div>
             <div class="form-group col-md-6">
               <label for="dep_type">Deposit Type</label>
-              <select id="inputState" class="form-control">
+              <select id="inputState" name="deposit_type" class="form-control">
                 <option value="No_Deposit" selected class="inputan">No Deposit</option>
                 <option value="Refundable">Refundable</option>
                 <option value="Non_Refund">Non Refund</option>
@@ -387,35 +384,47 @@ http://www.templatemo.com/tm-490-comila
           </div><div class="form-row">
             <div class="form-group col-md-6">
               <label for="agent">Agent</label>
-              <input type="number" class="form-control" id="agent" placeholder="Agent">
+              <input type="number" class="form-control" name="agent" placeholder="Agent">
             </div>
             <div class="form-group col-md-6">
               <label for="Company">Company</label>
-              <input type="number" class="form-control" id="Company" placeholder="Company">
+              <input type="number" class="form-control" name="company" placeholder="Company">
             </div>
           </div><div class="form-row">
             <div class="form-group col-md-6">
               <label for="waiting_list">Days In Waiting List</label>
-              <input type="number" class="form-control" id="waiting_list" placeholder="Days In Waiting List">
+              <input type="number" class="form-control" name="waiting_list" placeholder="Days In Waiting List">
             </div>
             <div class="form-group col-md-6">
               <label for="customer_type">Customer Type</label>
-              <select id="inputState" class="form-control">
+              <select id="inputState" name="customer_type" class="form-control">
                 <option value="Transient" selected class="inputan">Transient</option>
                 <option value="Contract">Contract</option>
                 <option value="Transient-Party">Transient Party'</option>
                 <option value="Group">Group'</option>
               </select>
             </div>
-          </div><div class="form-row">
+          </div>
+          <div class="form-row">
             <div class="form-group col-md-6">
               <label for="adr">Avg Daily Rate</label>
-              <input type="number" class="form-control" id="adr" placeholder="Avg Daily Rate">
+              <input type="number" class="form-control" name="adr" placeholder="Avg Daily Rate">
             </div>
             <div class="form-group col-md-6">
               <label for="car_parking">Required Car Parking Spaces</label>
-              <input type="number" class="form-control" id="car_parking" placeholder="Required Car Parking Spaces">
+              <input type="number" class="form-control" name="car_parking" placeholder="Required Car Parking Spaces">
             </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="lead_time">Lead Time</label>
+              <input type="number" class="form-control" name="lead_time" placeholder="Lead Time">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="car_parking">Required Car Parking Spaces</label>
+              <input type="number" class="form-control"  placeholder="Required Car Parking Spaces">
+            </div>
+          </div>
           <button id="myBtn" type="submit" class="btn btn-primary">Predict!</button>
         </form>
         <p>How's your predict!?</p>
